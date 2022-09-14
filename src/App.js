@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
@@ -8,6 +8,11 @@ const App = () => {
   const [todos, setTodos] = useState([]);
   const [editId, setEditId] = useState(0);
 
+  useEffect(() => {
+    fetch("https://too-doo-list-rickie.herokuapp.com/todos")
+      .then((res) => res.json())
+      .then((todos) => (console.logtodos));
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
 
