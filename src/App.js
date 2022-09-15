@@ -13,6 +13,7 @@ const App = () => {
       .then((res) => res.json())
       .then((todos) => (console.logtodos));
   }, []);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
